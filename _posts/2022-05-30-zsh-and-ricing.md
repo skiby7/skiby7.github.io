@@ -1,5 +1,5 @@
 ---
-title: ZSH and terminal ricing
+title: ZSH and Terminal Ricing
 date: 2022-05-30 16:10
 categories: [Linux]
 tags: [zsh, linux, terminal, customization]
@@ -13,7 +13,7 @@ tags: [zsh, linux, terminal, customization]
 sudo <package-manager install> zsh # apt install for Debian, dnf install for Fedora, etc.
 chsh -s $(which zsh)
 ```
->**Note**: to change shell for root user, rerun `chsh` with `sudo`.
+>**Note**: *to change shell for root user, rerun `chsh` with `sudo`.*
 
 This should work on most distros. After the installation reboot or logout.
 
@@ -22,7 +22,7 @@ This should work on most distros. After the installation reboot or logout.
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
->**Note**: running a script downloaded from the internet without checking what it does it's NOT recommended at all, so you can either open the link and check it or download the script and open it in your favorite text editor.
+>**Note**: *running a script downloaded from the internet without checking what it does it's NOT recommended at all, so you can either open the link and check it or download the script and open it in your favorite text editor.*
 
 Now the first time you open a terminal, it will prompt the config options for zsh, you can generate the default config or use a custom config. I'll skip it to install my favorite theme and import my `.zshrc` file:
 

@@ -1,5 +1,5 @@
 ---
-title: Fix X11 screen tearing 
+title: Fix X11 Screen Tearing 
 date: 2022-05-30 18:20
 categories: [Linux]
 tags: [X11, linux, display, intel]

@@ -1,5 +1,5 @@
 ---
-title: Raspbian OS Customization
+title: Raspberry Pi OS Customization
 date: 2022-05-30 19:00
 categories: [Linux, Raspberry Pi]
 tags: [linux, raspberry, raspbian, customization]
