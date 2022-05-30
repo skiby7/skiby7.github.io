@@ -1,5 +1,5 @@
 ---
-title: ZSH and Terminal Ricing
+title: Terminal Customization
 date: 2022-05-30 16:10
 categories: [Linux]
 tags: [zsh, linux, terminal, customization]
@@ -55,7 +55,7 @@ SPACESHIP_NODE_SHOW="false"
 
 # ZSH syntax highlighting
 
-The give the final touch to this rice, you can install a syntax highlighter for ZSH:
+The give the final touch to this theme, you can install a syntax highlighter for ZSH:
 
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
