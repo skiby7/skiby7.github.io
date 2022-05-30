@@ -1,8 +1,8 @@
 ---
 title: ZSH and terminal ricing
 date: 2022-05-30 16:10
-categories: [linux]
-tags: [zsh, linux, terminal]
+categories: [Linux]
+tags: [zsh, linux, terminal, customization]
 ---
 
 ![Terminal](../../assets/img/terminal-rice.png)

@@ -1,7 +1,7 @@
 ---
 title: Fix X11 screen tearing 
 date: 2022-05-30 18:20
-categories: [linux]
+categories: [Linux]
 tags: [X11, linux, display, intel]
 ---
 > **Note**: this guide is for Intel Graphics only.
