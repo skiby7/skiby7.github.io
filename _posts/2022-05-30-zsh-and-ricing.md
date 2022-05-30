@@ -34,17 +34,11 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 
 ## `.zshrc` config file
 ```bash
-
 export ZSH="/home/$USER/.oh-my-zsh"
-
 ZSH_THEME="spaceship"
-
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
-
 EMOJI=(🚀 👽 ☕ 🐧 🍻 🔮 💾 🍪 🌍 🐫 🦊 🦄 ❄️ ⚡ 🎄 🌈 👻 )
-
 function random_emoji {
   echo -n "$EMOJI[$RANDOM%$#EMOJI+1] "
 }
@@ -68,9 +62,36 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting
 echo "source zsh-syntax-highlighting.zsh" >> ~/.zshrc
 ```
+To get the palette with the numeric codes run [this](../../assets/scripts/colors.sh) simple script:
+
+```bash
+#!/bin/bash
+for((i=16; i<256; i++)); do
+    printf "\e[48;5;${i}m%03d" $i;
+    printf '\e[0m';
+    [ ! $((($i - 15) % 6)) -eq 0 ] && printf ' ' || printf '\n'
+done
+```
 Here's my `.zshrc` file updated with syntax highlighting color scheme:
 
 ```bash
+export ZSH="/home/$USER/.oh-my-zsh"
+ZSH_THEME="spaceship"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+EMOJI=(🚀 👽 ☕ 🐧 🍻 🔮 💾 🍪 🌍 🐫 🦊 🦄 ❄️ ⚡ 🎄 🌈 👻 )
+function random_emoji {
+  echo -n "$EMOJI[$RANDOM%$#EMOJI+1] "
+}
+SPACESHIP_CHAR_PREFIX="$(random_emoji)"
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_USER_COLOR="cyan"
+SPACESHIP_HOST_SHOW="always"
+SPACESHIP_HOST_COLOR="#f241ac"
+SPACESHIP_HOST_SHOW_FULL="false"
+alias df='df -h /dev/sd* -x tmpfs -x devtmpfs'
+alias fstab='sudo micro /etc/fstab'
+SPACESHIP_NODE_SHOW="false"
 ZSH_HIGHLIGHT_STYLES[default]=none
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=009
 ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=009,standout
