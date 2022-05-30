@@ -68,5 +68,32 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting
 echo "source zsh-syntax-highlighting.zsh" >> ~/.zshrc
 ```
+Here's my `.zshrc` file updated with syntax highlighting color scheme:
 
+```bash
+ZSH_HIGHLIGHT_STYLES[default]=none
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=009
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=009,standout
+ZSH_HIGHLIGHT_STYLES[alias]=fg=129
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=075
+ZSH_HIGHLIGHT_STYLES[function]=fg=003
+ZSH_HIGHLIGHT_STYLES[command]=fg=014
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=009,underline
+ZSH_HIGHLIGHT_STYLES[commandseparator]=none
+ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=009
+ZSH_HIGHLIGHT_STYLES[path]=fg=003,italic
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=063
+ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=063
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=063
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=002
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=009
+ZSH_HIGHLIGHT_STYLES[assign]=none
+```
 
+![sudo command](../../assets/img/rice-sudo-command.png) 
+![alias path](../../assets/img/rice-alias-path.png) 
+![function](../../assets/img/rice-function.png) 
