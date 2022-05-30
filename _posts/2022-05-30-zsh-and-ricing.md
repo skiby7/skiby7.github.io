@@ -13,7 +13,7 @@ tags: [zsh, linux, terminal, customization]
 sudo <package-manager install> zsh # apt install for Debian, dnf install for Fedora, etc.
 chsh -s $(which zsh)
 ```
->**Note**: *to change shell for root user, rerun `chsh` with `sudo`.*
+>**Note**: *in order to change shell for root user, rerun `chsh` with `sudo`.*
 
 This should work on most distros. After the installation reboot or logout.
 
