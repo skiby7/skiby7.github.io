@@ -4,7 +4,7 @@ date: 2022-05-30 18:20
 categories: [Linux]
 tags: [X11, linux, display, intel]
 ---
-> **Note**: this guide is for Intel Graphics only.
+> **Note**: *this guide is for Intel Graphics only.*
 
 Using X11 I've always experienced screen tearing while watching videos or scrolling web pages. To improve the general experience and reduce the tearing, you can enable the "Tear Free" for the Intel Driver. First, if it doesn't exist, create the config file:
 ``` bash
