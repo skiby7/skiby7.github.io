@@ -50,7 +50,9 @@ sudo borg create --stats --progress --compression lz4 ssh://user@ip:port//path/t
 
 # Restore
 
-To restore your backups, I recommend using [Vorta](https://vorta.borgbase.com/) to manage the backup repo and to mount it to a folder (CLI command `borg mount /path/to/repo /path/to/mountpoint`), copy the disk image you want to restore to its original location and then re-define the VM:
+<!-- To restore your backups, I recommend using [Vorta](https://vorta.borgbase.com/) to manage the backup repo and to mount it to a folder (CLI command `borg mount /path/to/repo /path/to/mountpoint`), copy the disk image you want to restore to its original location and then re-define the VM: -->
+
+To restore your backups, mount the repo to a folder whit `sudo borg mount /path/to/repo /path/to/mountpoint`, copy the disk image you want to restore to its original location and then re-define the VM:
 
 ```bash
 sudo virsh undefine MACHINE_NAME
