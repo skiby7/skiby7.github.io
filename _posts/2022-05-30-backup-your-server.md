@@ -25,7 +25,7 @@ sudo virsh domblklist MACHINE_NAME
 # Backup
 
 Now that you have all your VMs files, let's setup a backup with Borg.
-Borg uses repositories like git's to store incremental, compressed and deduplicated backups. 
+Borg uses repositories like git's to stored incremental, compressed and deduplicated backups. 
 Before initializing a new repo you have to choose you're backup location: it can be a local folder, a folder on a removable disk, a network folder mounted with Samba or NFS or even a remote location using SSH. If you plan to use SSH you should setup an SSH key to access the server.
 Let's init the repository:
 ```bash
@@ -35,7 +35,7 @@ borg init --encryption=repokey-blake2 /path/to/backup/folder
 # SSH
 borg init --encryption=repokey-blake2 ssh://user@ip:port//path/to/backup/folder
 ```
-If you don't want encrypted backups or you want to use other encryption algorithms, you can specify ` --encryption=none` for no encryption or `--encryption=repokey` to use SHA-256.
+If you don't want encrypted backups or you want to use other encryption algorithms, you can specify `--encryption=none` for no encryption or `--encryption=repokey` to use SHA-256.
 
 Lastly, let's create our first backup:
 
