@@ -2,7 +2,7 @@
 title: QEMU/KVM Machines Backup 
 date: 2022-06-08 12:20
 categories: [Sysadmin]
-tags: [sysadmin, linux, backup, storage, borg]
+tags: [sysadmin, kvm, linux, backup, storage, borg]
 ---
 
 # Prepare the machines
