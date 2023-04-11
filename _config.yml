@@ -21,12 +21,12 @@ timezone: Europe/Rome
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Dev Journey                          # the main title
+title: Linux Journey                          # the main title
 
-tagline: A doc site growing along with my dev knowledge   # it will display as the sub-title
+tagline: A handbook for sysadmins and linux users # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A doc site growing along with my dev knowledge
+  A handbook for sysadmins and linux users
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://skiby7.github.io'
