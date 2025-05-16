@@ -1,7 +1,7 @@
 ---
 title: Introduction to programming
 # date: 2023-05-16 18:00
-layout: default
+layout: page
 categories: [Programming]
 tags: [C, Python, Programming]
 ---
