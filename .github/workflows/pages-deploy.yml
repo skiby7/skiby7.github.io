@@ -1,51 +1,19 @@
-<<<<<<< HEAD
-name: 'Automatic build'
-=======
 name: "Build and Deploy"
->>>>>>> v7.2.4
 on:
   push:
     branches:
       - main
-<<<<<<< HEAD
-=======
-      - master
->>>>>>> v7.2.4
     paths-ignore:
       - .gitignore
       - README.md
       - LICENSE
 
-<<<<<<< HEAD
 jobs:
   continuous-delivery:
-
-=======
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
-jobs:
-  build:
->>>>>>> v7.2.4
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-<<<<<<< HEAD
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # for posts's lastmod
-=======
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -56,18 +24,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
->>>>>>> v7.2.4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-<<<<<<< HEAD
-          ruby-version: 2.7
-          bundler-cache: true
-
-      - name: Deploy
-        run: bash tools/deploy.sh
-=======
           ruby-version: 3.3
           bundler-cache: true
 
@@ -97,4 +57,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
->>>>>>> v7.2.4
