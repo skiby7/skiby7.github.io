@@ -62,7 +62,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting
 echo "source zsh-syntax-highlighting.zsh" >> ~/.zshrc
 ```
-To get the palette with the numeric codes run [this](./assets/scripts/colors.sh) simple script:
+<!-- To get the palette with the numeric codes run [this](assets/scripts/colors.sh) simple script: -->
 
 ```bash
 #!/bin/bash
