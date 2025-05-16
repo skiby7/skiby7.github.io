@@ -62,7 +62,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting
 echo "source zsh-syntax-highlighting.zsh" >> ~/.zshrc
 ```
-To get the palette with the numeric codes run [this](../../assets/scripts/colors.sh) simple script:
+To get the palette with the numeric codes run [this](assets/scripts/colors.sh) simple script:
 
 ```bash
 #!/bin/bash
@@ -115,6 +115,6 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=009
 ZSH_HIGHLIGHT_STYLES[assign]=none
 ```
 
-![sudo command](../../assets/img/rice-sudo-command.png)
-![alias path](../../assets/img/rice-alias-path.png)
-![function](../../assets/img/rice-function.png)
+![sudo command](assets/img/rice-sudo-command.png)
+![alias path](assets/img/rice-alias-path.png)
+![function](assets/img/rice-function.png)
