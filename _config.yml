@@ -142,7 +142,7 @@ kramdown:
       line_numbers: false
     block:
       line_numbers: true
-      start_line: 1[development | production]
+      start_line: 1
 
 pwa:
   enabled: true # The option for PWA feature (installable)
