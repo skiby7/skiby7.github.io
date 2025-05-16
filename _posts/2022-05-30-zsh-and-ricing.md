@@ -5,7 +5,7 @@ categories: [Linux]
 tags: [zsh, linux, terminal, customization]
 ---
 
-![Terminal](../../assets/img/terminal-rice.png)
+![Terminal](assets/img/terminal-rice.png)
 
 # Install ZSH and change shell
 
@@ -29,7 +29,7 @@ Now the first time you open a terminal, it will prompt the config options for zs
 ## Spaceship theme
 ```bash
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme" 
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
 
 ## `.zshrc` config file
@@ -115,6 +115,6 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=009
 ZSH_HIGHLIGHT_STYLES[assign]=none
 ```
 
-![sudo command](../../assets/img/rice-sudo-command.png) 
-![alias path](../../assets/img/rice-alias-path.png) 
-![function](../../assets/img/rice-function.png) 
+![sudo command](../../assets/img/rice-sudo-command.png)
+![alias path](../../assets/img/rice-alias-path.png)
+![function](../../assets/img/rice-function.png)
