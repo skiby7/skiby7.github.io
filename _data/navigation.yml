@@ -1,5 +1,0 @@
-- title: "Course"
-  url: /course/
-  children:
-    - title: "Introduction"
-      url: /course/introduction/
