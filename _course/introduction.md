@@ -74,3 +74,5 @@ Fortunately in python there are type hints that can be used to keep track of the
 a: int = 1000
 b: str = "Hello World!"
 ```
+
+In python if you want to know the type of something you can use `type(VAR_NAME)`.
