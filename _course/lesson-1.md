@@ -19,4 +19,15 @@ Now you can interact with the interpreter issuing commands, declaring variables 
 
 Whenever you see `>>>` it means that the interpreter is expecting an input, while `...` means that you are entering a multiline command (more on that later).
 
-The interpreter follows the
+The interpreter follows the *read-eval-print loop* (more about REPL [here](https://en.m.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)), so every command issued to the shell will automatically print its output unless it is assigned to a variable:
+
+```text
+>>> a = 10
+>>> a
+10
+>>> a + 10
+20
+```
+
+## Basic math operations
+
