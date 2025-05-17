@@ -40,7 +40,7 @@ Due to how the computer memory works, programming languages (more precisely comp
 
 - Statically: you have to declare the type of a variable and you **cannot** change it later
 
-```C
+```c
 int a = 10; // a is declared as an int
 a = "1000"; // it is not possible to assing a string to an int
 ```
@@ -52,7 +52,7 @@ var a int // Variable declared as int
 a = 10 // valid assignment
 b := 10.1 // The compiler knows that 10.1 is a float, so b has type float32
 ```
-```C++
+```c++
 // This is C++
 auto a = 10; // The compiler assigns the type int to a
 ```
