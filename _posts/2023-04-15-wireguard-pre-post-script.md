@@ -11,7 +11,7 @@ I spent an entire day trying to figure out how to restrict Wireguard clients acc
 
 When you enable or disable a new interface (`wg-quick up/down wgX`), runs the commands defined inside `/etc/wireguard/wgX.conf`:
 
-```toml
+```text
 PreUp=Command executed before enabling the interface
 PostUp=Command executed after the interface is up
 PostUp=You can also define multiple commands
