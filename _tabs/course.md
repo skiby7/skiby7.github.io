@@ -6,7 +6,7 @@ order: 4
 permalink: /course/
 ---
 
-This course is basically a collections of programming pills collected over the years. I'm publishing them here in case someone finds these concepts somewhat useful. Here's the index:
+This "course" is a collections of programming pills collected over the years. I'm publishing them here in case someone finds these concepts somewhat useful. Here's the index:
 
 <ul>
   {% for lesson in site.course %}
