@@ -92,7 +92,7 @@ Bitwise XOR (eclusive OR)
 0010 -> 1101
 ```
 
- >   **Note:** shifting 1 bit left or right equals respectevely to multiply or divide (much faster than regular operations) the operand by two!
+ > ℹ️ **Note:** shifting 1 bit left or right equals respectevely to multiply or divide (much faster than regular operations) the operand by two!
 
 ## Basic String Operations
 
@@ -124,7 +124,7 @@ contains = "H" in s  # True
 
 To output a string use the `print` function.
 
->   **Note:** in python `#` is a comment, so any character after that will be ignored by the interpreter until the end of the line.
+> ℹ️ **Note:** In python `#` is a comment, so any character after that will be ignored by the interpreter until the end of the line.
 
 ### f-String Formatting
 
