@@ -1,12 +1,10 @@
 ---
-title: Introduction to programming
+title: Introduction
 # date: 2023-05-16 18:00
 layout: page
 categories: [Programming]
 tags: [C, Python, Programming]
 ---
-
-# Introduction
 
 Programming languages are tools used to write instructions that a computer can understand. Different languages serve different purposes: some are close to the machine (like C), while others are more human-friendly and abstract (like Python).
 
