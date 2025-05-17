@@ -59,16 +59,18 @@ auto a = 10; // The compiler assigns the type int to a
 
 - Dynamically: you do not have to declare the type of the variable but it is inferred automatically by the rvalue and can change during the program execution (*at runtime*)
 
-```Python
+```python
 a = 10 # a is an int
 a = 10.1 # a is now a float
 a = "Hello Nedo!" # is now a string
 # From now on a is a string so the instruction below is invalid!
 if a > 10:
     # do something
-
 ```
- It is easier to write code with dynamic typing, but it is much easier to write bugs with it.
 
+Fortunately in python there are type hints that can be used to keep track of the variable type and that can be used by the linter and the lsp (programs that analyze the source code to both give you hints and check for errors) to help you find bugs:
 
-## Variable scoping
+```python
+a: int = 1000
+b: str = "Hello World!"
+```
