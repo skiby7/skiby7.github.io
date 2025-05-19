@@ -40,11 +40,136 @@ Key Rules of Indentation in Python:
 - Use either spaces or tabs, but not both (4 spaces per level are recommended).
 - Mismatched indentation causes an `IndentationError`.
 
+## Conditional statements
 
-## For loop
+### if-else
 
-Before introducing these data structures in python, it is important to introduce loops.
-A for loop in Python is a control flow statement that allows you to repeatedly execute a block of code for each item in a sequence (like a list, tuple, string, or other iterable objects). Here's the basic syntax:
+Conditional statements allow your program to make decisions and execute different code blocks based on conditions.
+In Python the keywords to use boolean values are `True` and `False`.
+
+```python
+if condition1:
+    # code to execute if condition1 is True
+elif condition2:
+    # code to execute if condition1 is False and condition2 is True
+else:
+    # code to execute if all above conditions are False
+```
+
+When you have an `if-else` statement (like the one above) only the first branch (the codeblocks in a conditional statement are called branches) whose condition is `True` gets executed:
+
+```python
+if False:
+    # Not executed
+elif True:
+    # Executed
+elif True:
+    # Not executed
+else:
+    # Not executed
+```
+
+If you have to check for multiple condition you have to use multiple `if` statements:
+
+```python
+if False:
+    # Executed
+if True:
+    # Executed
+if True:
+    # Executed
+```
+
+The condition that can be checked are briefly reported in the table below:
+
+| Operator | Name                     | Example       | Result  |
+|----------|--------------------------|---------------|---------|
+| `==`     | Equal to                 | `5 == 5`      | `True`  |
+| `!=`     | Not equal to             | `3 != 2`      | `True`  |
+| `>`      | Greater than             | `10 > 7`      | `True`  |
+| `<`      | Less than                | `4 < 6`       | `True`  |
+| `>=`     | Greater than or equal to | `8 >= 8`      | `True`  |
+| `<=`     | Less than or equal to    | `5 <= 3`      | `False` |
+| `is`     | Identity (same object)   | `x is None`   | Depends |
+| `is not` | Negated identity         | `x is not []` | `True`  |
+
+Some notes:
+
+- **`==` vs `is`**:
+   - `==` checks **value equality**.
+   - `is` checks **memory identity** (e.g., `a is b` only if `id(a) == id(b)`).
+  ```python
+
+  a = [1, 2, 3]
+  b = a          # `b` points to the same object as `a`
+  c = [1, 2, 3]  # `c` has the same value but is a different object
+
+  print(a is b)  # True (same object)
+  print(a == b)  # True (same value)
+  print(a is c)  # False (different objects)
+  print(a == c)  # True (same value)
+  ```
+- **Chaining Comparisons**:
+  ```python
+  if 1 < x <= 10:  # Equivalent to (1 < x) and (x <= 10)
+    print("Valid range")
+  ```
+
+### match-case
+
+Since Python version `3.10` and above (knowing on which Pyhton version your code will run is important!) the `match-case` statement has been introduced, providing pattern matching capabilities just like in other languages (which generally use a `switch` statement):
+
+```python
+match value:
+    case pattern1:
+        # code if value matches pattern1
+    case pattern2:
+        # code if value matches pattern2
+    case _:
+        # default case (optional)
+```
+
+Here's some examples:
+
+```python
+# Type matching
+value = 3.14
+match value:
+    case int():
+        print("Got an integer")
+    case float():
+        print("Got a float")  # This will execute
+    case str():
+        print("Got a string")
+
+# Simple value matching
+status = 404
+match status:
+    case 200:
+        print("Success")
+    case 404:
+        print("Not found")  # This will execute
+    case 500:
+        print("Server error")
+    case _:
+        print("Unknown status")
+
+# Pattern matching with variables
+point = (1, 2)
+match point:
+    case (0, 0):
+        print("Origin")
+    case (x, 0):
+        print(f"On x-axis at {x}")
+    case (0, y):
+        print(f"On y-axis at {y}")
+    case (x, y):
+        print(f"Point at ({x}, {y})")  # This will execute
+```
+
+## Loops
+
+A `for` loop in Python is a control flow statement that allows you to repeatedly execute a block of code for each item in a sequence (like a list, tuple, string, or other iterable objects). Here's the basic syntax:
 
 ```python
 for item in iterable:
@@ -74,7 +199,7 @@ Not all the `range` parameters are mandatory (more on function parameters later)
 
 Here's an example:
 ```python
-for i in range(2, 24, 4):  # 0 to 4
+for i in range(2, 24, 4):
     print(i)
 
 # Output:
@@ -89,7 +214,7 @@ for i in range(2, 24, 4):  # 0 to 4
 Another useful function is `enumerate(iterable)` that allows you to iterate over an object (in the next chapter we will see the main iterable data structures available in python) keeping track of both the index of the iteration and the value:
 
 ```python
-for i, v in enumerate(range(2, 24, 4)):  # 0 to 4
+for i, v in enumerate(range(2, 24, 4)):
     print(i, v)
 
 # Output:
@@ -101,3 +226,84 @@ for i, v in enumerate(range(2, 24, 4)):  # 0 to 4
 # 5 22
 ```
 
+To exit from a for loop you can use the `break` keyword:
+```python
+for i in range(10):
+  if i == 5:
+    break
+ print(i)
+# Output:
+# 5
+```
+
+The `else` after a for loop is used to run a block of code **if and only if the loop completes normally** (i.e. without a break):
+```python
+for i in range(10):
+  if i == 20:
+    break
+else:
+  # This runs!
+  pass
+
+for i in range(10):
+  if i == 3:
+    break
+else:
+  # This DOES NOT run!
+  pass
+```
+
+> ℹ️ **Note:** This concept is a Python feature, do not expect to find it in other languages!
+
+For loops are generally used when you know how many iterations you need beforehand. On the other hand, when you have to run a loop until a condition is met, `while` loops are used:
+
+```python
+while condition:
+    if something:
+        break
+else:
+    print("Loop finished without breaking")
+```
+
+The loop above exits if the `condition` is `True` or `something` is `True`, while the `else` block runs iff `condition` is `True` (just like the `for` loop).
+
+## The `None` value
+
+`None` is a special constant in Python that represents the absence of a value or a `null` value. It is commonly used to indicate that a variable or function doesn't return anything meaningful.
+It is falsy in boolean contexts (`if not None` is evaluated as `if True`), but it is not equivalent to `False`, because it explicitly means "no value", so you should explicitly check whether something is `None` or is not `None`:
+
+```python
+val = None
+if val is None:
+  pass
+elif val is not None:
+  pass
+
+```
+
+
+## Functions
+
+A function is a reusable block of code that performs a specific task. Functions help in:
+
+- **Modularity**: Breaking code into smaller, manageable parts.
+- **Reusability**: Avoid repeating the same code.
+- **Abstraction**: Hide complex logic behind a simple interface
+
+```python
+def greet(name):
+    """Returns a greeting message."""
+    return f"Hello, {name}!"
+
+print(greet("Alice"))  # Output: "Hello, Alice!"
+```
+
+Let's brake down the code above:
+
+- `def` is the keyword to define a function.
+- The name of the function have to follow the `snake_case` naming convention (this is also true for the variables and the file names, but not for classes, more on that later).
+- The parameters are defined inside the parentheses and are comma-separated.
+- A function can return any type and can have also multiple return values.
+- The comment made with a multiline string below the declaration is called `docstring` and, if the text editor supports it, it is shown by the autocompletion system while typing the function name, so that you can have a brief explaination of what the function does.
+
+In Python, functions can have a type hint for both the parameters and the return value (which is `None` by default if nothing is returned)
