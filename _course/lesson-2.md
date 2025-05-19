@@ -338,7 +338,9 @@ fan_of("Scuderia Ferrari") # I'm a supporter of Scuderia Ferrari
 ### Recursive functions
 
 A recursive function is a function that calls itself during its execution. It breaks a problem into smaller subproblems until it reaches a base case (stopping condition).
+
 Key concepts:
+
 - **Base Case**:
   - The simplest scenario where recursion stops.
   - It is the terminating condition (similar to a loop's exit condition).
@@ -356,3 +358,5 @@ def factorial(n):
 
 # factorial(5) → 5 * factorial(4) → 5 * 4 * factorial(3) → ... → 5 * 4 * 3 * 2 * 1
 ```
+
+> 📓**Exercise:** write two functions to compute the fibonacci sequence, one using loops and one using recursion.
