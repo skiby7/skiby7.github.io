@@ -109,17 +109,17 @@ Some notes:
 - **`==` vs `is`**:
    - `==` checks **value equality**.
    - `is` checks **memory identity** (e.g., `a is b` only if `id(a) == id(b)`).
-    ```python
 
-    a = [1, 2, 3]
-    b = a          # `b` points to the same object as `a`
-    c = [1, 2, 3]  # `c` has the same value but is a different object
+  ```python
+  a = [1, 2, 3]
+  b = a          # `b` points to the same object as `a`
+  c = [1, 2, 3]  # `c` has the same value but is a different object
 
-    print(a is b)  # True (same object)
-    print(a == b)  # True (same value)
-    print(a is c)  # False (different objects)
-    print(a == c)  # True (same value)
-    ```
+  print(a is b)  # True (same object)
+  print(a == b)  # True (same value)
+  print(a is c)  # False (different objects)
+  print(a == c)  # True (same value)
+  ```
 - **Chaining Comparisons**:
   ```python
   if 1 < x <= 10:  # Equivalent to (1 < x) and (x <= 10)
@@ -317,4 +317,42 @@ Let's brake down the code above:
 - A function can return any type and can have also multiple return values.
 - The comment made with a multiline string below the declaration is called `docstring` and, if the text editor supports it, it is shown by the autocompletion system while typing the function name, so that you can have a brief explaination of what the function does.
 
-In Python, functions can have a type hint for both the parameters and the return value (which is `None` by default if nothing is returned)
+In Python, functions can have a type hint for both the parameters and the return value (which is `None` by default if nothing is returned):
+
+```python
+def calc_pow(base: int, exponent: int) -> int:
+  return base**exponent
+```
+
+You can also have default parameters:
+
+```python
+def fan_of(team="Pisa Sporting Club") -> None:
+  print(f"I'm a supporter of {team}")
+  # It does not return anything
+
+fan_of() # I'm a supporter of Pisa Sporting Club
+fan_of("Scuderia Ferrari") # I'm a supporter of Scuderia Ferrari
+```
+
+### Recursive functions
+
+A recursive function is a function that calls itself during its execution. It breaks a problem into smaller subproblems until it reaches a base case (stopping condition).
+Key concepts:
+- **Base Case**:
+  - The simplest scenario where recursion stops.
+  - It is the terminating condition (similar to a loop's exit condition).
+
+- **Recursive Case**:
+  - The function calls itself with a modified input to progress toward the base case.
+
+```python
+
+def factorial(n):
+    if n == 1:  # Base case
+        return 1
+    else:       # Recursive case
+        return n * factorial(n - 1)
+
+# factorial(5) → 5 * factorial(4) → 5 * 4 * factorial(3) → ... → 5 * 4 * 3 * 2 * 1
+```
