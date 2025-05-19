@@ -95,6 +95,17 @@ The condition that can be checked are briefly reported in the table below:
 
 Some notes:
 
+- Every condition (e.g. `x >= 10`) can be preceded by the `not` logical operator to negate that condition.
+- Conditions can be concatenated using the `and` and `or` logiacal operators (e.g. `x > 10 and x < 20`, `x <= 10 or x >=20`)
+- The precedence is `not` > `and` > `or`, so you have to use `()` to group statements together
+- The `and` operator returns when he mets the first `False` condition
+  ```python
+  condition1 = False
+  condition2 = True
+  if condition1 and condition2:
+      pass
+  # Condition 2 is not even evaluated!
+  ```
 - **`==` vs `is`**:
    - `==` checks **value equality**.
    - `is` checks **memory identity** (e.g., `a is b` only if `id(a) == id(b)`).
