@@ -1,5 +1,5 @@
 ---
-title: Lesson 3 - Python control flow and file execution
+title: Lesson 2 - Python control flow and file execution
 layout: page
 categories: [Programming]
 tags: [Python, Programming]
