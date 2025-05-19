@@ -109,17 +109,17 @@ Some notes:
 - **`==` vs `is`**:
    - `==` checks **value equality**.
    - `is` checks **memory identity** (e.g., `a is b` only if `id(a) == id(b)`).
-  ```python
+    ```python
 
-  a = [1, 2, 3]
-  b = a          # `b` points to the same object as `a`
-  c = [1, 2, 3]  # `c` has the same value but is a different object
+    a = [1, 2, 3]
+    b = a          # `b` points to the same object as `a`
+    c = [1, 2, 3]  # `c` has the same value but is a different object
 
-  print(a is b)  # True (same object)
-  print(a == b)  # True (same value)
-  print(a is c)  # False (different objects)
-  print(a == c)  # True (same value)
-  ```
+    print(a is b)  # True (same object)
+    print(a == b)  # True (same value)
+    print(a is c)  # False (different objects)
+    print(a == c)  # True (same value)
+    ```
 - **Chaining Comparisons**:
   ```python
   if 1 < x <= 10:  # Equivalent to (1 < x) and (x <= 10)
