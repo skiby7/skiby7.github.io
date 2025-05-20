@@ -92,7 +92,7 @@ Bitwise XOR (eclusive OR)
 0010 -> 1101
 ```
 
- > ℹ️ **Note:** shifting 1 bit left or right equals respectevely to multiply or divide (much faster than regular operations) the operand by two!
+ > ℹ️ **Note:** shifting 1 bit left or right equals respectively to multiply or divide (much faster than regular operations) the operand by two!
 
 ## Basic String Operations
 
@@ -195,4 +195,66 @@ s.split(" ")        # ['Hello']
 | `\a`            | Bell (alert)           |
 | `\0`            | Null character         |
 
+You can also format and style your output using special escape characters:
+
+| Color             | Foreground        | Background        |
+|------------------|-------------------|-------------------|
+| **Black**         | `\033[30m`        | `\033[40m`        |
+| **Red**           | `\033[31m`        | `\033[41m`        |
+| **Green**         | `\033[32m`        | `\033[42m`        |
+| **Yellow**        | `\033[33m`        | `\033[43m`        |
+| **Blue**          | `\033[34m`        | `\033[44m`        |
+| **Magenta**       | `\033[35m`        | `\033[45m`        |
+| **Cyan**          | `\033[36m`        | `\033[46m`        |
+| **White**         | `\033[37m`        | `\033[47m`        |
+| **Bright Black**  | `\033[90m`        | `\033[100m`       |
+| **Bright Red**    | `\033[91m`        | `\033[101m`       |
+| **Bright Green**  | `\033[92m`        | `\033[102m`       |
+| **Bright Yellow** | `\033[93m`        | `\033[103m`       |
+| **Bright Blue**   | `\033[94m`        | `\033[104m`       |
+| **Bright Magenta**| `\033[95m`        | `\033[105m`       |
+| **Bright Cyan**   | `\033[96m`        | `\033[106m`       |
+| **Bright White**  | `\033[97m`        | `\033[107m`       |
+
+| Effect       | Code         |
+|--------------|--------------|
+| Reset        | `\033[0m`    |
+| Bold         | `\033[1m`    |
+| Underline    | `\033[4m`    |
+| Reversed     | `\033[7m`    |
+
+
+> ℹ️ **Note:** After printing a styling escape character you have to print the `reset` character to return to the normal style.
+
+## Basic type conversion
+
+Python supports two types of type conversions: implicit conversion and explicit conversion.
+
+The implicit conversion is automatically performed by Python when it doesn't lose information.
+
+```python
+x = 10        # int
+y = 2.5       # float
+result = x + y  # result is float (12.5)
+print(type(result))  # <class 'float'>
+```
+
+| Function     | Description                        | Example                | Output           |
+|--------------|------------------------------------|------------------------|------------------|
+| `int()`      | Converts to integer                | `int("10")`            | `10`             |
+| `float()`    | Converts to float                  | `float("3.14")`        | `3.14`           |
+| `str()`      | Converts to string                 | `str(123)`             | `"123"`          |
+| `bool()`     | Converts to boolean (`True/False`) | `bool(0)`              | `False`          |
+| `list()`     | Converts iterable to list          | `list("abc")`          | `['a', 'b', 'c']`|
+| `tuple()`    | Converts iterable to tuple         | `tuple([1, 2])`        | `(1, 2)`         |
+| `set()`      | Converts iterable to set           | `set([1, 2, 2, 3])`    | `{1, 2, 3}`      |
+| `dict()`     | Converts key-value pairs to dict   | `dict([(1, "a")])`     | `{1: 'a'}`       |
+
+> ℹ️ **Note:** We will cover iterable types in [lesson 3](/course/lesson-3/).
+
+```python
+a = "5"
+b = int(a) + 10
+print(b)  # 15
+```
 

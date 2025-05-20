@@ -96,9 +96,9 @@ The condition that can be checked are briefly reported in the table below:
 Some notes:
 
 - Every condition (e.g. `x >= 10`) can be preceded by the `not` logical operator to negate that condition.
-- Conditions can be concatenated using the `and` and `or` logiacal operators (e.g. `x > 10 and x < 20`, `x <= 10 or x >=20`)
+- Conditions can be concatenated using the `and` and `or` logical operators (e.g. `x > 10 and x < 20`, `x <= 10 or x >=20`)
 - The precedence is `not` > `and` > `or`, so you have to use `()` to group statements together
-- The `and` operator returns when he mets the first `False` condition
+- The `and` operator returns when he finds the first `False` condition
   ```python
   condition1 = False
   condition2 = True
@@ -128,7 +128,7 @@ Some notes:
 
 ### match-case
 
-Since Python version `3.10` and above (knowing on which Pyhton version your code will run is important!) the `match-case` statement has been introduced, providing pattern matching capabilities just like in other languages (which generally use a `switch` statement):
+Since Python version `3.10` and above (knowing on which Python version your code will run is important!) the `match-case` statement has been introduced, providing pattern matching capabilities just like in other languages (which generally use a `switch` statement):
 
 ```python
 match value:
@@ -314,12 +314,12 @@ Let's brake down the code above:
 - The name of the function have to follow the `snake_case` naming convention (this is also true for the variables and the file names, but not for classes, more on that later).
 - The parameters are defined inside the parentheses and are comma-separated.
 - A function can return any type and can have also multiple return values.
-- The comment made with a multiline string below the declaration is called `docstring` and, if the text editor supports it, it is shown by the autocompletion system while typing the function name, so that you can have a brief explaination of what the function does.
+- The comment made with a multiline string below the declaration is called `docstring` and, if the text editor supports it, it is shown by the autocompletion system while typing the function name, so that you can have a brief explanation of what the function does.
 
 Now that you have declare a function, you can call it by simply typing the function name followed by the `()` containing the parameters:
 
 ```python
-def greet(name): # Funtion declaration
+def greet(name): # Function declaration
     """Returns a greeting message."""
     return f"Hello, {name}!"
 
@@ -380,7 +380,7 @@ fan_of("Scuderia Ferrari") # I'm a supporter of Scuderia Ferrari
 
 ### Recursive functions
 
-A recursive function is a function that calls itself during its execution. It breaks a problem into smaller subproblems until it reaches a base case (stopping condition).
+A recursive function is a function that calls itself during its execution. It breaks a problem into smaller sub-problems until it reaches a base case (stopping condition).
 
 Key concepts:
 
@@ -401,7 +401,7 @@ def factorial(n):
 # factorial(5) → 5 * factorial(4) → 5 * 4 * factorial(3) → ... → 5 * 4 * 3 * 2 * 1
 ```
 
-> 📓**Exercise:** write three functions to compute the n-th element of the fibonacci, where `n` is passed as a parameter. In one implementation use loops, in the other two use recursion, with both `if-else` and `match-case` statements. Finally use a for loop to print the sequence up to 10. The function signature must be `fibonacci(n: int) -> int`. Soloutions can be found [here](/assets/fib.py).
+> 📓**Exercise:** write three functions to compute the n-th element of the fibonacci, where `n` is passed as a parameter. In one implementation use loops, in the other two use recursion, with both `if-else` and `match-case` statements. Finally use a for loop to print the sequence up to 10. The function signature must be `fibonacci(n: int) -> int`. Solutions can be found [here](/assets/fib.py).
 
 ## Error handling in Python
 
