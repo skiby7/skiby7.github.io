@@ -401,5 +401,5 @@ def factorial(n):
 # factorial(5) → 5 * factorial(4) → 5 * 4 * factorial(3) → ... → 5 * 4 * 3 * 2 * 1
 ```
 
-> 📓**Exercise:** write three functions to compute the n-th element of the fibonacci, where `n` is passed as a parameter. In one implementation use loops, in the other two use recursion, with both `if-else` and `match-case` statements. Finally use a for loop to print the sequence up to 10. The function signature must be `fibonacci(n: int) -> int`. Soloutions can be found [here](fib.py).
+> 📓**Exercise:** write three functions to compute the n-th element of the fibonacci, where `n` is passed as a parameter. In one implementation use loops, in the other two use recursion, with both `if-else` and `match-case` statements. Finally use a for loop to print the sequence up to 10. The function signature must be `fibonacci(n: int) -> int`. Soloutions can be found [here](/assets/fib.py).
 
