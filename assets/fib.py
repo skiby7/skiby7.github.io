@@ -12,6 +12,9 @@ def fib_iterative(n: int) -> int:
     return a
 
 def fib_recursive1(n: int) -> int:
+    if n < 0:
+        print("Error!")
+        return -1
     if n == 0:
         return 0
     if n == 1:
@@ -20,6 +23,9 @@ def fib_recursive1(n: int) -> int:
 
 
 def fib_recursive2(n: int) -> int:
+    if n < 0:
+        print("Error!")
+        return -1
     match n:
         case 0 | 1:
             return n
