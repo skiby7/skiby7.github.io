@@ -403,3 +403,86 @@ def factorial(n):
 
 > 📓**Exercise:** write three functions to compute the n-th element of the fibonacci, where `n` is passed as a parameter. In one implementation use loops, in the other two use recursion, with both `if-else` and `match-case` statements. Finally use a for loop to print the sequence up to 10. The function signature must be `fibonacci(n: int) -> int`. Soloutions can be found [here](/assets/fib.py).
 
+## Error handling in Python
+
+Python uses `try`, `except`, and `finally` blocks to handle errors gracefully without crashing the program.
+
+- `try`: Code that might raise an exception.
+- `except`: Code to handle specific or general exceptions.
+- `finally`: Code that always runs, regardless of whether an exception occurred.
+
+```python
+try:
+    result = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+finally:
+    print("Cleanup code runs no matter what.")
+
+# The ouput will be:
+# Error: division by zero
+# Cleanup code runs no matter what.
+```
+
+Be aware that only the type of error that you explicitly check will be catched, the others will crash the program:
+
+```python
+try:
+    result = int("abcd")  # This will raise a ValueError
+except ZeroDivisionError as e:
+    print(f"Error: {e}") # <- The error won't be catched
+finally:
+    print("This will run as the last thing before crashing")
+```
+
+
+You can also handle multiple types of error in different ways:
+
+```python
+try:
+    result = int("abcd")
+except ValueError as e:
+  pass
+except ZeroDivisionError as e:
+  pass
+finally:
+  pass
+```
+
+Or in the same way:
+
+```python
+try:
+    result = int("abcd")
+except (ValueError, ZeroDivisionError) as e:
+  pass
+finally:
+  pass
+```
+
+Finally, you can except any type of error using the most generic `Exception`:
+
+```python
+try:
+    result = int("abcd")
+except Exception as e:
+  pass
+```
+
+If you are interested only int `finally` functionality you can just include that:
+```python
+try:
+  if condition1:
+    return x
+  if condition2:
+    return y
+finally:
+  print("This will run in both cases")
+```
+
+Be careful that if you return something in the finally block it will override the other return values.
+
+
+
+
+
