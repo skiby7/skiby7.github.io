@@ -238,6 +238,7 @@ for i, v in enumerate(range(2, 24, 4)):
 ```
 
 To exit from a for loop you can use the `break` keyword:
+
 ```python
 for i in range(10):
   if i == 5:
@@ -305,8 +306,6 @@ A function is a reusable block of code that performs a specific task. Functions 
 def greet(name):
     """Returns a greeting message."""
     return f"Hello, {name}!"
-
-print(greet("Alice"))  # Output: "Hello, Alice!"
 ```
 
 Let's brake down the code above:
@@ -317,6 +316,33 @@ Let's brake down the code above:
 - A function can return any type and can have also multiple return values.
 - The comment made with a multiline string below the declaration is called `docstring` and, if the text editor supports it, it is shown by the autocompletion system while typing the function name, so that you can have a brief explaination of what the function does.
 
+Now that you have declare a function, you can call it by simply typing the function name followed by the `()` containing the parameters:
+
+```python
+def greet(name): # Funtion declaration
+    """Returns a greeting message."""
+    return f"Hello, {name}!"
+
+print(greet("Nedo"))  # Actual function call
+```
+
+> ℹ️ **Note:** Remember that the function must be defined before you can call it! Also, remember that you cannot have two functions with the same name!
+
+
+If you have multiple values you can also explicitly assign the value to each of them:
+
+```python
+def greet2(first_name, last_name):
+    """Returns a greeting message."""
+    return f"Hello, {first_name} {last_name}!"
+print(greet2(first_name="Nedo", last_name="Nadi")) # Output: "Hello, Nedo Nadi!"
+
+# When explicitly setting the parameter, the order does not matter
+print(greet2(last_name="Nadi", first_name="Nedo")) # Still outputs "Hello, Nedo Nadi!"
+print(greet2("Nadi", "Nedo")) # This, instead, will print "Hello, Nadi Nedo!"
+```
+
+
 In Python, functions can have a type hint for both the parameters and the return value (which is `None` by default if nothing is returned):
 
 ```python
@@ -324,12 +350,29 @@ def calc_pow(base: int, exponent: int) -> int:
   return base**exponent
 ```
 
+Here's an example of a function with multiple return values:
+
+```python
+# We will se in the next lesson what is a tuple
+def foo(a: int, b: int) -> tuple[int, int]:
+    return a**2, b/2
+
+c, d = foo(2, 2) # Now c=4 and b=1
+# You can ignore one or more return values
+_, e = foo(100, 200) # e=100
+```
+
+
+> ℹ️ **Note:** The set `<name, parameters, return_type>` is called the function signature. In python the parameters type is optional, but is always better to include it.
+
+
 You can also have default parameters:
 
 ```python
 def fan_of(team="Pisa Sporting Club") -> None:
   print(f"I'm a supporter of {team}")
-  # It does not return anything
+  # It does not return anything,
+  #so the return value is explicitly set to None
 
 fan_of() # I'm a supporter of Pisa Sporting Club
 fan_of("Scuderia Ferrari") # I'm a supporter of Scuderia Ferrari
@@ -349,7 +392,6 @@ Key concepts:
   - The function calls itself with a modified input to progress toward the base case.
 
 ```python
-
 def factorial(n):
     if n == 1:  # Base case
         return 1
@@ -359,4 +401,5 @@ def factorial(n):
 # factorial(5) → 5 * factorial(4) → 5 * 4 * factorial(3) → ... → 5 * 4 * 3 * 2 * 1
 ```
 
-> 📓**Exercise:** write two functions to compute the fibonacci sequence, one using loops and one using recursion.
+> 📓**Exercise:** write three functions to compute the n-th element of the fibonacci, where `n` is passed as a parameter. In one implementation use loops, in the other two use recursion, with both `if-else` and `match-case` statements. Finally use a for loop to print the sequence up to 10. The function signature must be `fibonacci(n: int) -> int`. Soloutions can be found [here](fib.py).
+
