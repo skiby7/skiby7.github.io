@@ -7,7 +7,7 @@ tags: [Python, Programming]
 
 In the first chapter we have seen how to open a python prompt and interact with the interpreter (REPL), now we will see how to write a (bit) more complex program.
 
-To create your first script you can open your favourite text editor (I personally suggest [Zed](https://zed.dev/download)) and create a new file called `main.py` containig:
+To create your first script you can open your favourite text editor (I personally suggest [Zed](https://zed.dev/download)) and create a new file called `main.py` containing:
 
 ```python
 print("Hello World!")
