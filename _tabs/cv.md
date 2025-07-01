@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: redirect
 title: Curriculum Vitae
 icon: fas fa-solid fa-building-columns
 order: 4
