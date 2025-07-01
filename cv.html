@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonardo Scoppitto – Curriculum Vitae</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 15px;
+      line-height: 1.4;
+    }
+
+    #printBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      padding: 12px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+
+    #printBtn:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      /* max-width: 800px; */
+      width: 210mm;
+      height: 297mm;
+      max-width: 210mm;
+      max-height: 297mm;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      #printBtn {
+        display: none;
+      }
+
+      .container {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+        max-width: none;
+      }
+
+      .page-break {
+        /* page-break-before: always; */
+      }
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      // border-bottom: 3px solid #3498db;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 10px;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+      color: #555;
+      font-size: 12px;
+    }
+
+    .contact-info a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 16px;
+      color: #2c3e50;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 14px;
+      color: #34495e;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .job-item {
+      margin-bottom: 25px;
+      // border-left: 3px solid #3498db;
+      padding-left: 15px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .job-period {
+      font-size: 10px;
+      color: #7f8c8d;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .job-description {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .job-item ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .job-item li {
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .profile-text {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #444;
+      text-align: justify;
+    }
+
+    .skills-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 15px;
+      font-size: 12px;
+    }
+
+    .skill-category {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .skill-category strong {
+      color: #2c3e50;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .education-item {
+      // border-left: 3px solid #e74c3c;
+      padding-left: 15px;
+      margin-bottom: 15px;
+    }
+
+    .education-title {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 3px;
+    }
+
+    .education-period {
+      font-size: 10px;
+      color: #7f8c8d;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="printBtn">📄 Print to PDF</button>
+
+  <div id="content" class="container">
+    <header>
+      <h1>Leonardo Scoppitto</h1>
+      <div class="contact-info">
+        <p>
+          <!-- <strong>Email:</strong>
+                        <a href="mailto:leonardo.scoppitto@gmail.com"
+                            >leonardo.scoppitto@gmail.com</a
+                        > -->
+          <!-- | <strong>Phone:</strong> +39 331 5665792 -->
+        </p>
+        <p>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/leonardo-scoppitto-85bba9199/"
+            target="_blank">linkedin.com/in/leonardo-scoppitto-85bba9199</a>
+          | <strong>GitHub:</strong>
+          <a href="https://github.com/skiby7" target="_blank">github.com/skiby7</a>
+          | <strong>Blog:</strong>
+          <a href="https://skiby7.github.io/" target="_blank">skiby7.github.io</a>
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="job-item">
+        <h3 class="job-title">
+          Zerynth S.p.A. - Software Engineer
+        </h3>
+        <div class="job-period">
+          June 2023 – Present, Pisa, Italy
+        </div>
+        <p class="job-description">
+        </p>
+        <ul>
+          <li>
+            Developed embedded firmware and automation tools
+            for industrial data acquisition
+          </li>
+          <li>
+            Administered and automated Linux-based systems
+            used in edge computing platforms
+          </li>
+          <li>
+            Contributed to full-stack development of
+            cloud-integrated industrial monitoring applications
+          </li>
+          <li>
+            Collaborated across DevOps and R&amp;D teams using
+            Docker, Jenkins, Git, Go, Python, and TypeScript
+          </li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <h3 class="job-title">BLT - Software &amp; Systems Engineer</h3>
+        <div class="job-period">
+          January 2021 – December 2022, Lido di Camaiore, Italy
+        </div>
+        <p class="job-description">
+          Contributed to the development of high-performance
+          broadcasting systems used in live sports and
+          entertainment productions worldwide, including Olympics, F1,
+          and World Cups.
+        </p>
+        <ul>
+          <li>Administered Linux servers and hypervisors</li>
+          <li>
+            Developed embedded software for broadcast hardware
+          </li>
+          <li>
+            Created applications and tooling using C# and the .NET framework
+          </li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <h3 class="job-title">
+          Formula Student - Designer and Driver
+        </h3>
+        <div class="job-period">
+          September 2016 – September 2021, Pisa, Italy
+        </div>
+        <p class="job-description">
+          Contributed to the university's Formula Student racing
+          team (<a href="https://eteamsquadracorse.unipi.it/" target="_blank">E-Team Squadra Corse</a>) as
+          both a technical designer and driver by designing and developing a custom dry sump lubrication
+          system for the Honda CBR600RR engine and by driving the car during both pre-season test and official
+          competitions
+        </p>
+      </div>
+
+      <div class="job-item">
+        <h3 class="job-title">
+          Freelance Work - Web, Infrastructure &amp; IT Support
+        </h3>
+        <div class="job-period">
+          September 2020 – Present, Pisa, Italy
+        </div>
+        <p class="job-description">
+          Provide ongoing technical support, infrastructure
+          management, and IT services, for various SMEs in the Pisa metropolitan area.
+        </p>
+      </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3 class="education-title">
+          Master's Degree in Computer Science – University of Pisa
+        </h3>
+        <div class="education-period">In Progress - Expected 2026</div>
+      </div>
+      <div class="education-item">
+        <h3 class="education-title">
+          Bachelor's Degree in Computer Science – University of
+          Pisa
+        </h3>
+        <div class="education-period">2021 – 2024</div>
+      </div>
+      <div class="education-item">
+        <h3 class="education-title">
+          Bachelor's Degree in Aerospace Engineering – University of
+          Pisa
+        </h3>
+        <div class="education-period">2016 – 2020 (<em>not completed</em>)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills &amp; Summary</h2>
+      <div class="skills-section">
+        <div class="skill-category">
+          <strong>Programming Languages:</strong>
+          Python, C, Go, C#, Javascript/Typescript
+        </div>
+        <div class="skill-category">
+          <strong>Tools &amp; Technologies:</strong>
+          Git, Github and Github Actions, Docker, Jenkins, Linux, .NET Framework
+        </div>
+        <div class="skill-category">
+          <strong>Specializations:</strong>
+          Industrial IoT, DevOps, Full-Stack Development,
+          Low-latency Systems
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document
+      .getElementById("printBtn")
+      .addEventListener("click", function () {
+        if (window.chrome && window.chrome.runtime) {
+          try {
+            const printSettings = {
+              mediaType: "print",
+              shouldPrintBackgrounds: false,
+              shouldPrintSelectionOnly: false,
+              marginsType: 1, // no margins
+              pageRanges: [],
+              headerFooterEnabled: false,
+              displayHeaderFooter: false,
+            };
+
+            window.print(printSettings);
+          } catch {
+            window.print();
+          }
+        } else {
+          window.print();
+        }
+      });
+
+    const style = document.createElement("style");
+    style.textContent = `
+                       @media print {
+                           @page {
+                               margin: 10mm;
+                               size: A4;
+                           }
+
+                           /* Hide default browser headers/footers */
+                           html, body {
+                               -webkit-print-color-adjust: exact;
+                               print-color-adjust: exact;
+                           }
+                       }
+                   `;
+    document.head.appendChild(style);
+
+    // Alternative: Auto-save functionality
+    function autoSavePDF() {
+      // This creates a blob and triggers download
+      const printContents =
+        document.getElementById("content").innerHTML;
+      const printWindow = window.open("", "_blank");
+      printWindow.document.write(`
+                           <html>
+                               <head>
+                                   <title>Leonardo Scoppitto - CV</title>
+                                   <style>
+                                       ${document.querySelector("style").textContent}
+                                       @page { margin: 0.5in; size: A4; }
+                                       body { margin: 0; padding: 20px; }
+                                   </style>
+                               </head>
+                               <body>
+                                   <div class="container">
+                                       ${printContents}
+                                   </div>
+                               </body>
+                           </html>
+                       `);
+      printWindow.document.close();
+
+      setTimeout(() => {
+        printWindow.print();
+        printWindow.close();
+      }, 500);
+    }
+
+  </script>
+</body>
+
+</html>
